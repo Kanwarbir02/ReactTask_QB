@@ -36,12 +36,7 @@ const Frontpage = () => {
 
         </li>
 
-        
-
-        
-
-        {/* <button>Click Here to book your Ticket!</button> */}
-
+    
         
         
     </div>

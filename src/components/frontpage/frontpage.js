@@ -1,8 +1,11 @@
 import fetchMovieData from "../../api/apiDetails"
 import { useState, useEffect } from 'react';
 import {Link} from "react-router-dom";
+import useStyles from "./frontpage.module.css";
 
 const Frontpage = () => {
+
+    const classes = useStyles;
 
     const [showData, setShowData] = useState([]);
 
@@ -18,23 +21,28 @@ const Frontpage = () => {
     }, []);
 
     const dataList = showData.map((data) =>
-    <div key={data.show.id} margin="30px">
-        <li >
-        {data.show.name}
+    <div key={data.show.id} margin="30px" className={classes.listData}>
+        <li className={classes.listComp}>
+            {data.show.name}
+
+            <img src={data.show.image.medium} alt="No Image Found" height="120px" width="100px" />
+
+            <p className={classes.summaryf}>{data.show.summary}</p>
+
+            <Link to="/form" ><button movieName = {data.show.name} className={classes.btnform}>
+                Book Your Ticket Now!
+                </button>
+            </Link>
+
         </li>
-
-        <img src={data.show.image.original} alt="No Image Found" height="40px" width="60px"/>
-
-        <p>{data.show.summary}</p>
 
         
 
-        <button>Click Here to book your Ticket!</button>
+        
 
-        <Link to="/form" ><button movieName = {data.show.name}>
-              Go to Page 2 
-            </button>
-        </Link>
+        {/* <button>Click Here to book your Ticket!</button> */}
+
+        
         
     </div>
         
@@ -44,10 +52,10 @@ const Frontpage = () => {
 
 
     return ( 
-        <div>
-            <h1>Movie Details</h1>
+        <div className={classes.container}>
+            <h1 className={classes.header}>Movie Details</h1>
 
-            <ul>{dataList}</ul>
+            <ul className={classes.listData}>{dataList}</ul>
 
         </div>
      );

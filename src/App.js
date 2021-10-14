@@ -1,14 +1,34 @@
 import './App.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import Frontpage from './components/frontpage';
+import Frontpage from './components/frontpage/frontpage';
+import {BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
+import Ticketform from './components/ticketform/ticketform';
 
 function App() {
 
   return (
-    <div className="App">
-      <Frontpage />   
-    </div>
+    // <Ticketform />
+    <Router>
+        <div className="App">
+
+                <Switch>
+                    <Route exact path="/">
+                      <Frontpage />
+                    </Route>
+                </Switch>
+             
+
+        
+                <Switch>
+                    <Route exact path="/form">
+                        <Ticketform />
+                    </Route>
+                </Switch>
+            
+        </div>
+
+    </Router>    
   );
 }
 

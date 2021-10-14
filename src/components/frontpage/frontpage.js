@@ -1,5 +1,6 @@
-import fetchMovieData from "../api/apiDetails";
+import fetchMovieData from "../../api/apiDetails"
 import { useState, useEffect } from 'react';
+import {Link} from "react-router-dom";
 
 const Frontpage = () => {
 
@@ -26,7 +27,15 @@ const Frontpage = () => {
 
         <p>{data.show.summary}</p>
 
+        
+
         <button>Click Here to book your Ticket!</button>
+
+        <Link to="/form" ><button movieName = {data.show.name}>
+              Go to Page 2 
+            </button>
+        </Link>
+        
     </div>
         
 
@@ -40,7 +49,6 @@ const Frontpage = () => {
 
             <ul>{dataList}</ul>
 
-            {/* <h2>{JSON.stringify(showData[0].score)}</h2> */}
         </div>
      );
 }

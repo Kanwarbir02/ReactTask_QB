@@ -17,6 +17,7 @@
     color: bisque;
     text-align: center;
     padding: 10px;
+    font-weight: bold;
 }
 
 .listData{
@@ -29,11 +30,13 @@
     margin: 30px;
     padding: 10px;
     font-size: 2.5rem;
+    font-weight: bold;
 }
 
 .summaryf{
     margin-top: 10px;
     font-size: 1.5rem;
+    font-weight: 300;
 }
 
 .btnform{

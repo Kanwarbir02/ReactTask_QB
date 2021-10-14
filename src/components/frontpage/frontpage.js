@@ -30,7 +30,7 @@ const Frontpage = () => {
             <p className={classes.summaryf}>{data.show.summary}</p>
 
             <Link to="/form" ><button movieName = {data.show.name} className={classes.btnform}>
-                Book Your Ticket Now!
+                Book Your Ticket for {data.show.name}!
                 </button>
             </Link>
 

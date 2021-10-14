@@ -1,18 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
 
-/* body {
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #ecf0f3;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  place-items: center;
-  overflow: hidden;
-  font-family: poppins;
-} */
+
 
 .container {
   position: relative;
@@ -28,7 +16,7 @@
 .brandlogo {
   height: 100px;
   width: 100px;
-  background: url("https://img.icons8.com/color/100/000000/twitter--v2.png");
+  background: url("https://image.shutterstock.com/image-illustration/empty-theater-stage-red-velvet-260nw-1141366178.jpg");
   margin: auto;
   border-radius: 50%;
   box-sizing: border-box;
@@ -47,16 +35,10 @@
 .inputs {
   text-align: center;
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
-/* label, input, button {
-  display: block;
-  width: 100%;
-  padding: 0;
-  border: none;
-  outline: none;
-  box-sizing: border-box;
-} */
 
 .labForm {
   margin-bottom: 4px;
@@ -91,9 +73,9 @@
   transition: 0.5s;
 }
 
-/* button:hover {
+.btnform:hover {
   box-shadow: none;
-} */
+}
 
 /* a {
   position: absolute;
